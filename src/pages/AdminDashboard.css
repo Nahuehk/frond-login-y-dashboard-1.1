@@ -1,0 +1,95 @@
+/* AdminDashboard.css — solo estilos EXCLUSIVOS del panel Admin */
+
+.ad-header { margin-bottom: 4px; }
+.ad-title   { font-size: 28px; font-weight: 700; color: #111827; margin: 0 0 4px; }
+.ad-subtitle{ font-size: 13px; color: #9ca3af; margin: 0; }
+
+/* Stats */
+.ad-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.ad-stat-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #e8eaf0;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ad-stat-icon-wrap {
+  width: 46px; height: 46px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.ad-stat-icon-wrap--blue   { background: #eef2ff; color: #4a63e0; }
+.ad-stat-icon-wrap--green  { background: #ecfdf5; color: #059669; }
+.ad-stat-icon-wrap--purple { background: #f5f3ff; color: #7c3aed; }
+.ad-stat-icon-wrap--pink   { background: #fdf4ff; color: #c026d3; }
+
+.ad-stat-valor { font-size: 26px; font-weight: 700; color: #111827; margin: 0 0 2px; }
+.ad-stat-label { font-size: 12px; color: #6b7280; margin: 0; }
+
+/* Acceso rápido */
+.ad-section-label {
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.08em; color: #9ca3af;
+  margin: 0 0 14px;
+}
+
+.ad-acceso-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.ad-acceso-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  transition: opacity 0.15s, transform 0.12s;
+  text-align: left;
+}
+
+.ad-acceso-btn:hover   { opacity: 0.88; transform: translateY(-1px); }
+.ad-acceso-btn:active  { transform: translateY(0); }
+
+.ad-acceso-btn--gray   { background: #f3f4f6; color: #374151; }
+.ad-acceso-btn--green  { background: #ecfdf5; color: #065f46; }
+.ad-acceso-btn--blue   { background: #eff6ff; color: #1d4ed8; }
+.ad-acceso-btn--purple { background: #f5f3ff; color: #5b21b6; }
+.ad-acceso-btn--yellow { background: #fffbeb; color: #92400e; }
+.ad-acceso-btn--gray2  { background: #f9fafb; color: #374151; }
+
+/* Actividad */
+.ad-actividad-texto  { flex: 1; font-size: 14px; color: #374151; }
+.ad-actividad-tiempo { font-size: 12px; color: #9ca3af; white-space: nowrap; }
+
+.ad-act-icon           { flex-shrink: 0; }
+.ad-act-icon--check    { color: #00b87d; }
+.ad-act-icon--info     { color: #4a63e0; }
+.ad-act-icon--message  { color: #7c3aed; }
+.ad-act-icon--alert    { color: #f59e0b; }
+
+@media (max-width: 1100px) {
+  .ad-stats-grid  { grid-template-columns: repeat(2, 1fr); }
+  .ad-acceso-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .ad-stats-grid  { grid-template-columns: 1fr; }
+  .ad-acceso-grid { grid-template-columns: 1fr; }
+}
